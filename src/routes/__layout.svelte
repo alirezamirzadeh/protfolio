@@ -19,6 +19,10 @@ import Head from "$lib/Head.svelte";
         font-display: swap;
         src: url("/fonts/Estedad.woff2") format("woff2");
       }
+      * {
+        margin: 0;
+        padding: 0;
+      }
       :global(body) {
       margin: 0;
       padding: 0;

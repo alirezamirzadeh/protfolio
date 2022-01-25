@@ -52,8 +52,14 @@
          margin-left: 2rem;
          font-size: 19px;
          font-weight: 400;
+         padding: .25rem .5rem ;
+        border-radius: .5rem;
+        transition: .3s all;
 
+    }
 
+    a:hover {
+        background-color: rgba(110, 110, 110, .1);
     }
 
 
