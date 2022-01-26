@@ -2,15 +2,17 @@
       import { page } from "$app/stores";
         import {theme,changeTheme} from '../stores/theme';
         import {onMount} from 'svelte';
+
+
     onMount (() => {
-        if ($theme === 'dark') {
-            changeTheme()
-        }
+        if ($theme !== "dark") return
+        changeTheme()
     })
 
         
     let menus = [
         {name: "خانه",url: "/"},
+        {name: "دفترچه مهمان",url: "/guestbook"},
         {name: "بلاگ",url: "/blog"},
         {name: "پروژه ها",url: "/projects"},
         {name: "تکه کد",url: "/snippets"},
@@ -22,7 +24,7 @@
     <nav>
             {#each menus as menu (menu.name)}
         
-                <a {...$$props} class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
+                <a class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
              
             {/each}
     </nav>

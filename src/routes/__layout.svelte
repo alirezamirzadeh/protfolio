@@ -42,9 +42,11 @@ import Head from "$lib/Head.svelte";
             background-color: #131516;
             color: #eee;
       }
-      :global(p) {
-        padding: 0;
-        margin: 0;
-       }
+      
+
+      :global(a) {
+        text-decoration: none;
+        color: inherit;
+      }
 
 </style>

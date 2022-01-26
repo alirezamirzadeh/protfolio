@@ -26,10 +26,10 @@
                     <img src="/images/like.svg" alt="" width="24px">
                     <span class="count">{count.toLocaleString("fa-IR")}</span>
                 </div>
-                <div class="icon">
+                <!-- <div class="icon">
                     <img src="/images/comment.svg" alt="" width="24px">
                 <span class="count"> {count.toLocaleString("fa-IR")}</span>
-                </div>
+                </div> -->
                 
             </div>
         </article>

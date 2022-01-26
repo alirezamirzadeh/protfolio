@@ -1,18 +1,18 @@
 <hr>
 <footer>
     <div class="menu">
-        <h3>خانه</h3>
-        <h3>درباره من</h3>
+        <a href="/">خانه</a>
+        <a href="/about">درباره من</a>
     </div>
     <div class="menu">
-        <h3>گیتهاب</h3>
-        <h3>تلگرام</h3>
-        <h3>دریبل</h3>
+        <a href="https://github.com/alirezamirzadeh" target="_blank">گیتهاب</a>
+        <a href="https://t.me/amooalireza" target="_blank">تلگرام</a>
+        <a href="https://dribbble.com/rexalirz72" target="_blank">دریبل</a>
     </div>
     <div class="menu">
-        <h3>ابزارها</h3>
-        <h3>دفترچه مهمان</h3>
-        <h3>تکه کد</h3>
+        <a href="/uses">ابزارها</a>
+        <a href="/guestbook">دفترچه مهمان</a>
+        <a href="/snippets">تکه کد</a>
     </div>
 
 </footer>
@@ -34,7 +34,7 @@
         grid-template-columns: repeat(3,minmax(0,1fr));
         display: grid;
     }
-    h3 {
+    a {
         font-weight: 300;
         opacity: .5;
         transition: .3s all ;
@@ -43,8 +43,14 @@
         text-align: right;
         width: 100%;
     }
-    h3:hover {
+    a:hover {
         color: #666;
         opacity: 1;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 </style>
