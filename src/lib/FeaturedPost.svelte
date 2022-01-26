@@ -1,12 +1,16 @@
 <script>
     let count = 4
+    export let posts;
+
 </script>
 
 <section>
     <h2>پست های پیشنهادی</h2>
     <aside>
-        <article class="border_bg article1">
-            <p>علت و نحوه تبدیل شدن من به یک توسعه دهنده نرم‌افزار Full-Stack</p>
+        
+    {#each  posts as {path, metadata: {title}} }
+        <a href={`/${path.replace(".md","").replace("/data","")}`} class="border_bg article1">
+            <p>{title}</p>
             <div class="box__icon">
                 <div class="icon">
                     <img src="/images/like.svg" alt="" width="24px">
@@ -18,34 +22,9 @@
                 </div>
                
             </div>
-        </article>
-        <article class="article2 border_bg">
-            <p>علت و نحوه تبدیل شدن من به یک توسعه دهنده نرم‌افزار Full-Stack</p>
-            <div class="box__icon">
-                <div class="icon">
-                    <img src="/images/like.svg" alt="" width="24px">
-                    <span class="count">{count.toLocaleString("fa-IR")}</span>
-                </div>
-                 <div class="icon">
-                    <img src="/images/comment.svg" alt="" width="24px">
-                <span class="count"> {count.toLocaleString("fa-IR")}</span>
-                </div> 
-                
-            </div>
-        </article>
-        <article class="article3 border_bg ">
-            <p>علت و نحوه تبدیل شدن من به یک توسعه دهنده نرم‌افزار Full-Stack</p>
-            <div class="box__icon">
-                <div class="icon">
-                    <img src="/images/like.svg" alt="" width="24px">
-                    <span class="count">{count.toLocaleString("fa-IR")}</span>
-                </div>
-                <div class="icon">
-                    <img src="/images/comment.svg" alt="" width="24px">
-                <span class="count"> {count.toLocaleString("fa-IR")}</span>
-                </div>
-            </div>
-        </article>
+        </a>
+   {/each}
+  
     </aside>
     <p class="all__posts"> تمام مقالات <span class="larr">&larr</span></p>
 </section>
