@@ -5,7 +5,7 @@
     </p>
     <div class="box__sub">
         <span class="id">آیدی : alirzaemirzadeh@</span>
-        <button>عضویت</button>
+        <a href="https://t.me/alirezamirzadeh">عضویت</a>
     </div>
     <p class="vpn">برای عضویت داخل کانال، روشن بودن VPN ضروری است</p>
 </section>
@@ -52,7 +52,7 @@
 
     }
 
-    button {
+    a {
         background-color: rgb(235 235 235/1);
         width: 150px;
         border-radius: .25rem;
@@ -60,12 +60,13 @@
         color: inherit;
         font-family: inherit;
         height: 100%;
-        font-size: 1rem;
+        font-size: 1.125rem;
         font-weight: 600;
         cursor: pointer;
-  
+        text-align: center;
+        padding-top: .2rem;
     }
-    :global(body.dark-mode) button {
+    :global(body.dark-mode) a {
         background-color: rgb(51 51 51/1);
     }
     .id {

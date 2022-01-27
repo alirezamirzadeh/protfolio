@@ -1,53 +1,47 @@
+<script context="module">
+    const allProject = import.meta.glob("../../../data/projects/*.md");
+    console.log(allProject);
 
+    let project = [];
+
+
+    for (let path in allProject) {
+     project.push(
+      allProject[path]().then( ({metadata}) => {
+       return { path, metadata}
+      })
+     );  
+    }
+
+
+    export async function load() {
+      const projects = await (await Promise.all(project))
+      return {
+        props: {projects}
+      }
+    }
+</script>
+
+<script>
+    export let projects;
+    console.log(projects[0].path.replace(".md","").replace("/data/projects","").replace("../../../",""));
+</script>
 
 
 <main>
     <h2>پروژه ها</h2>
     <section>
-        <div class="project">
-            <img src="/images/protfolio.jpg" alt=""  >
+        {#each projects as {path, metadata: {tags,image,url}} (path)}
+        <a href={url} class="project">
+            <img src="/images/{image}" alt=""  >
             <div class="tags">
-                <span class="tag">SvelteKit</span>
-                <span class="tag">CSS</span>
-                <span class="tag">HTML</span>
-                <span class="tag">SSR</span>
-                <span class="tag">Animation</span>
-
+                {#each tags.split(' ') as tag}
+                     <span class="tag">{tag}</span>
+                {/each}
             </div>
-        </div>
-        <div class="project">
-            <img src="/images/protfolio.jpg" alt="" >
-            <div class="tags">
-                <span class="tag">SvelteKit</span>
-                <span class="tag">CSS</span>
-                <span class="tag">HTML</span>
-                <span class="tag">SSR</span>
-                <span class="tag">Animation</span>
-
-            </div>
-        </div>
-        <div class="project">
-            <img src="/images/protfolio.jpg" alt="" >
-            <div class="tags">
-                <span class="tag">SvelteKit</span>
-                <span class="tag">CSS</span>
-                <span class="tag">HTML</span>
-                <span class="tag">SSR</span>
-                <span class="tag">Animation</span>
-
-            </div>
-        </div>
-        <div class="project">
-            <img src="/images/pish.jpg" alt=""  >
-            <div class="tags">
-                <span class="tag">SvelteKit</span>
-                <span class="tag">CSS</span>
-                <span class="tag">HTML</span>
-                <span class="tag">SSR</span>
-                <span class="tag">Animation</span>
-
-            </div>
-        </div>
+        </a>
+        {/each}
+      
     </section>
 </main>
 

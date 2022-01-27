@@ -1,79 +1,32 @@
+<script>
+    export let projects
+    console.log(projects.tags);
+</script>
+
 <section>
     <h2>نمونه کارها</h2>
     <div class="projects">
+        {#each projects as {path,metadata: {title,body,tags,url}} (path)}
+        <a href={url} target="_blank" class="project__box">
+            <div class="project__nav">
+               
+                <img src="/images/Folder.svg" alt="">
+                <div class="nav__right">
+                    <img src="/images/GitHub.svg" alt="">
+                    <img src="/images/link.svg" alt="">
+                </div>
+            </div>
+            <p class="title">{title}</p>
+            <p class="body">{body}</p>
+            <div class="box__tag">
+                {#each tags.split(' ') as tag}
+                <span class="tag">{tag}</span> 
 
-        <div class="project__box">
-            <div class="project__nav">
-               
-                <img src="/images/Folder.svg" alt="">
-                <div class="nav__right">
-                    <img src="/images/GitHub.svg" alt="">
-                    <img src="/images/link.svg" alt="">
-                </div>
+                {/each}
             </div>
-            <p class="title">وب اپلیکیشن آب و هوا</p>
-            <p class="body">یک اپلیکیشن که دیتا را از یک api میگرد و و با سرچ کردن نام شهرهای ایران و خارج از ایران اطلاعات هواشناسی را در اختیار شما قرار میدهد</p>
-            <div class="box__tag">
-                <span class="tag">Svelte.js</span> 
-                <span class="tag">CSS</span>  
-                <span class="tag">JS</span>
-            </div>
-        </div>
-        <div class="project__box">
-            <div class="project__nav">
-               
-                <img src="/images/Folder.svg" alt="">
-                <div class="nav__right">
-                    <img src="/images/GitHub.svg" alt="">
-                    <img src="/images/link.svg" alt="">
-                </div>
-            </div>
-            <p class="title">وب اپلیکیشن آب و هوا</p>
-            <p class="body">یک اپلیکیشن که دیتا را از یک api میگرد و و با سرچ کردن نام شهرهای ایران و خارج از ایران اطلاعات هواشناسی را در اختیار شما قرار میدهد</p>
-            <div class="box__tag">
-                <span class="tag">Svelte.js</span> 
-                <span class="tag">CSS</span>  
-                <span class="tag">JS</span>
-            </div>
-        </div>
-  
-        <div class="project__box">
-            <div class="project__nav">
-               
-                <img src="/images/Folder.svg" alt="">
-                <div class="nav__right">
-                    <img src="/images/GitHub.svg" alt="">
-                    <img src="/images/link.svg" alt="">
-                </div>
-            </div>
-            <p class="title">وب اپلیکیشن آب و هوا</p>
-            <p class="body">یک اپلیکیشن که دیتا را از یک api میگرد و و با سرچ کردن نام شهرهای ایران و خارج از ایران اطلاعات هواشناسی را در اختیار شما قرار میدهد</p>
-            <div class="box__tag">
-                <span class="tag">Svelte.js</span> 
-                <span class="tag">CSS</span>  
-                <span class="tag">JS</span>
-            </div>
-        </div>
-  
-        <div class="project__box">
-            <div class="project__nav">
-               
-                <img src="/images/Folder.svg" alt="">
-                <div class="nav__right">
-                    <img src="/images/GitHub.svg" alt="">
-                    <img src="/images/link.svg" alt="">
-                </div>
-            </div>
-            <p class="title">وب اپلیکیشن آب و هوا</p>
-            <p class="body">یک اپلیکیشن که دیتا را از یک api میگرد و و با سرچ کردن نام شهرهای ایران و خارج از ایران اطلاعات هواشناسی را در اختیار شما قرار میدهد</p>
-            <div class="box__tag">
-                <span class="tag">Svelte.js</span> 
-                <span class="tag">CSS</span>  
-                <span class="tag">JS</span>
-            </div>
-        </div>
-  
-  
+        </a>
+        {/each}
+     
     </div>
     <p class="all__posts"> تمام نمونه کارها <span class="larr">&larr</span></p>
 
