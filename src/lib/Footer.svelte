@@ -44,7 +44,7 @@
         width: 100%;
     }
     a:hover {
-        color: #666;
+        color: #333;
         opacity: 1;
     }
 

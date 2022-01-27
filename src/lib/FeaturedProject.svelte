@@ -28,7 +28,7 @@
         {/each}
      
     </div>
-    <p class="all__posts"> تمام نمونه کارها <span class="larr">&larr</span></p>
+    <a href="/projects" class="all__posts"> تمام نمونه کارها <span class="larr">&larr</span></a>
 
 </section>
 
@@ -40,7 +40,7 @@
         font-weight: 900;
     }
     section {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
     .projects {
         display: flex;

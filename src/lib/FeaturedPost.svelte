@@ -9,7 +9,7 @@
     <aside>
         
     {#each  posts as {path, metadata: {title}} }
-        <a href={`/${path.replace(".md","").replace("/data","")}`} class="border_bg article1">
+        <a href={`/${path.replace(".md","").replace("/data","")}`} class="border_bg article">
             <p>{title}</p>
             <div class="box__icon">
                 <div class="icon">
@@ -26,7 +26,7 @@
    {/each}
   
     </aside>
-    <p class="all__posts"> تمام مقالات <span class="larr">&larr</span></p>
+    <a href="/blog" class="all__posts"> تمام مقالات <span class="larr">&larr</span></a>
 </section>
 
 
@@ -68,7 +68,7 @@
         transform: scale(1.015);
         transition: .2s all ;
     }
-    :global(body.dark-mode) .article1  {
+    :global(body.dark-mode) .article:nth-child(1) {
         background: 
             linear-gradient(to right, #131516, #131516), 
             linear-gradient(to right,#818cf8 , #d8b4fe ); 
@@ -79,14 +79,14 @@
 
            
     }
-    :global(body.dark-mode) .article2 {
+    :global(body.dark-mode)  .article:nth-child(2)  {
         background:    
          linear-gradient(to right, #131516, #131516),
         linear-gradient(to right, #3b82fe , #6ee7b7);
         background-clip: padding-box, border-box;
         background-origin: padding-box, border-box;   
     }
-    :global(body.dark-mode) .article3  {
+    :global(body.dark-mode)  .article:nth-child(3)   {
         background:    
             linear-gradient(to right, #131516, #131516),
             linear-gradient(to right, #fca5a5 , #fde68a);
@@ -94,7 +94,7 @@
         background-origin: padding-box, border-box;  
     }
 
-    .article1 {
+    .article:nth-child(1)  {
 
         background: 
             linear-gradient(to right, white, white), 
@@ -106,7 +106,7 @@
 
     
 
-    .article2 {
+    .article:nth-child(2)  {
         background:    
          linear-gradient(to right, white, white),
         linear-gradient(to right, #3b82fe , #6ee7b7);
@@ -114,7 +114,7 @@
         background-origin: padding-box, border-box;
     }
 
-    .article3 {
+    .article:nth-child(3) {
         background:    
             linear-gradient(to right, white, white),
             linear-gradient(to right, #fca5a5 , #fde68a);
