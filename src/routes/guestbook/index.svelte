@@ -1,7 +1,8 @@
 <script>
 
-import { bubble } from "svelte/internal";
-
+import {auth,signIn} from '../../stores/auth';
+import { messages,addTodo } from '../../stores/guestbookStore.js';
+let value = '';
 </script>
 
 <main>
@@ -18,16 +19,35 @@ import { bubble } from "svelte/internal";
             برای بازدیدکنندگان آینده سایت من پیامی به اشتراک بگذارید.
 
         </p>
+        {#if $auth}
         <div class="box__input">
-            <input class="box__sub" placeholder="پیام شما ...">
-            <button>عضویت</button>
+            <input bind:value class="box__sub" placeholder="پیام شما ..." required>
+            <button on:click={addTodo(value,$auth.email)} class="btn-send">فرستادن</button>
         </div>
+
+        {:else}
+        <div class="box__input">
+
+        <button on:click={signIn}>عضویت</button>
+        </div>
+        {/if}
         <p class="information">اطلاعات شما فقط برای نمایش نام شما استفاده می شود</p>
     </div>
 
     <section>
-        
-        <div class="message">
+       {#if $messages !== null}
+            {#each $messages as message}
+            
+                <div class="message">
+                    <p class="text">{message.message}</p>
+                    <div class="box__inf">
+                        <span class="name">علیرضا</span> <span class="fun">|</span>
+                        <span class="date">{message.created_at.split(":")[0].split("-")[0]} / {message.created_at.split(":")[0].split("-")[1]}</span>
+                    </div>
+                </div>
+             {/each}
+       {/if}
+        <!-- <div class="message">
             <p class="text">وب سایت شما واقعا عالی است!</p>
             <div class="box__inf">
                 <span class="name">علیرضا</span> <span class="fun">|</span>
@@ -63,7 +83,7 @@ import { bubble } from "svelte/internal";
                 <span class="name">عرفان مولا </span> <span class="fun">|</span>
                 <span class="date">{new Date().toLocaleDateString('fa-IR')}</span>
             </div>
-        </div>
+        </div> -->
     </section>
     
 </main>
@@ -119,6 +139,9 @@ import { bubble } from "svelte/internal";
         font-weight: 600;
         cursor: pointer;
         text-align: center;
+    }
+
+    .btn-send {
         padding-top: .2rem;
         position: absolute;
         top: 4px;

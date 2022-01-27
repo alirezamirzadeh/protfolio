@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^1.29.4",
 		"mdsvex-relative-images": "^1.0.1",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.0.1",

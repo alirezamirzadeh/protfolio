@@ -1,6 +1,12 @@
 <script>
 import Footer from "$lib/Footer.svelte";
 import Head from "$lib/Head.svelte";
+import {onMount} from 'svelte';
+import {checkUser} from '../stores/auth';
+;
+
+
+onMount(() => checkUser())
 
 </script>
 

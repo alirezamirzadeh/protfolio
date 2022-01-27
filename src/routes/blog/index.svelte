@@ -18,9 +18,13 @@
 </script>
 
 <script>
-import Search from "$lib/Search.svelte";
 export let posts;
+let value ='';
 
+let filterBlog= ''
+ $: filterBlog = posts.filter(item => item.metadata.title.toLowerCase().includes(value.toLowerCase()))
+
+ console.log(filterBlog,value);
 </script>
 
 
@@ -32,13 +36,17 @@ export let posts;
     <p>
         شاید بشه گفت هر کسی که برنامه‌نویس شد یه روزی با یه نخ نامرئی وصل شد به یه عالمه معما که هرچی حلشون میکردی و کنار هم میذاشتی تموم نمیشد
     </p>
-    <Search />
+    <div class="search">
+        <input bind:value type="text" placeholder="جستجو مقاله">
+    <img src="/images/search.svg" alt="">
+    </div>
     <h2>
         تمام مقالات
     </h2>
 
     <div class="box_articles">
-        {#each  posts as {path, metadata: {title,sum}} }
+      {#if filterBlog.length > 0}  
+        {#each  filterBlog as {path, metadata: {title,sum}} }
             <a href={`/blog/${path.replace(".md","").replace("/data","")}`} class="article">
                 <div class="nav__article">
                     <h3>
@@ -48,7 +56,12 @@ export let posts;
                 </div>
             <p>{sum}</p>
             </a>
-       {/each}
+        {/each}
+    
+        {:else}
+
+        <h3>مقاله ای وجود نداره</h3>
+    {/if}
     </div>
 </main>
 
@@ -89,5 +102,45 @@ export let posts;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .search {
+        position: relative;
+        width: 100%;
+    }
+    input {
+        margin: 1.5rem 0 3rem 0;
+        width: 96%;
+        height: 2.5rem;
+        border-radius: .5rem;
+        font-family: inherit;
+        padding-right: 1rem;
+        border: 0;
+        outline: none;
+        font-size: .95rem;
+        border: 3px solid rgba(0, 0, 0, 0.05);
+        color: inherit;
+    }
+
+    input:focus{
+        border:3px solid #000;
+
+    }
+
+    :global(body.dark-mode) input:focus {
+        border:3px solid #fff;
+    }
+
+
+    :global(body.dark-mode) input {
+        background-color: rgba(255, 255, 255, .05);
+    }
+
+    img {
+        position: absolute;
+        top: 2.3rem;
+        left: 1rem;
+        filter: invert(78%) sepia(38%) saturate(85%) hue-rotate(06deg) brightness(83%) contrast(100%);
+
     }
 </style>

@@ -1,7 +1,6 @@
 <script context="module">
     const allPosts = import.meta.glob("./**/*.md");
     const allProject = import.meta.glob("../../data/projects/*.md");
-    console.log(allProject);
 
     let body = [];
     let project = [];
@@ -25,7 +24,6 @@
     export async function load() {
      const posts = await (await Promise.all(body)).slice(-3)
       const projects = await (await Promise.all(project))
-      console.log(projects);
       return {
         props: {posts,projects}
       }
