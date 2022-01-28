@@ -23,7 +23,7 @@
 
     hr {
         opacity: .2;
-        margin-top: 5rem;
+        margin-top: 3rem;
          height: 1px; 
          border: 0;
         background-color: #999;

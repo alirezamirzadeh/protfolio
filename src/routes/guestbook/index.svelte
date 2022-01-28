@@ -10,8 +10,8 @@ let value = '';
         دفترچه مهمان
     </p>
     <p class="body">
-        خب سلام، امیدوارم که حالتون خوب باشه و همچین چیز های مرسومی، دو هفته پیش یک پادکستی منتشر کردم درمورد مفهوم MVP ، ایده این بود
-
+            اگه دوست داری یک پیام بنویس, می تواند هرچیزی باشد(درخواست,اطلاعات,قدردانی یا یک جک و...) 
+            زمان  شگفت زده کردن و غافلگیری منه 
     </p>
     <div class="box__send">
         <p class="title">وقت نوشتنه :))</p>
@@ -42,7 +42,7 @@ let value = '';
                     <p class="text">{message.message}</p>
                     <div class="box__inf">
                         <span class="name">{$auth.user_metadata.user_name}</span> <span class="fun">|</span>
-                        <span class="date">{message.created_at.split(":")[0].split("-")[0]} / {message.created_at.split(":")[0].split("-")[1]}</span>
+                        <span class="date">{message.created_at.split(":")[0].split("-")[0]} / {message.created_at.split(":")[0].split("-")[1]} / {message.created_at.split(":")[0].split("-")[2].split('T')[0]}</span>
                     </div>
                 </div>
              {/each}
