@@ -41,49 +41,13 @@ let value = '';
                 <div class="message">
                     <p class="text">{message.message}</p>
                     <div class="box__inf">
-                        <span class="name">علیرضا</span> <span class="fun">|</span>
+                        <span class="name">{$auth.user_metadata.user_name}</span> <span class="fun">|</span>
                         <span class="date">{message.created_at.split(":")[0].split("-")[0]} / {message.created_at.split(":")[0].split("-")[1]}</span>
                     </div>
                 </div>
              {/each}
        {/if}
-        <!-- <div class="message">
-            <p class="text">وب سایت شما واقعا عالی است!</p>
-            <div class="box__inf">
-                <span class="name">علیرضا</span> <span class="fun">|</span>
-                <span class="date">{new Date().toLocaleDateString('fa-IR')}</span>
-            </div>
-        </div>
-        <div class="message">
-            <p class="text">Hi, we need content about SvelteKit :)))))))))))))
-            </p>
-            <div class="box__inf">
-                <span class="name">مهدیار</span> <span class="fun">|</span>
-                <span class="date">{new Date().toLocaleDateString('fa-IR')}</span>
-            </div>
-        </div>
-        <div class="message">
-            <p class="text">سلام! وب سایت دوست داشتنی، چند سال پیش من سعی کردم چیزی که در حال پخش است را پیاده سازی کنم، اکنون که آن را در وب سایت شما می بینم، تمایل دارم به وب سایت خود نیز اضافه کنم</p>
-            <div class="box__inf">
-                <span class="name">رضا</span> <span class="fun">|</span>
-                <span class="date">{new Date().toLocaleDateString('fa-IR')}</span>
-            </div>
-        </div>
-        <div class="message">
-            <p class="text">وب سایت شما واقعا عالی است!</p>
-            <div class="box__inf">
-                <span class="name">مازیار</span> <span class="fun">|</span>
-                <span class="date">{new Date().toLocaleDateString('fa-IR')}</span>
-            </div>
-        </div>
-        <div class="message">
-            <p class="text">کار شگفت انگیز!
-            </p>
-            <div class="box__inf">
-                <span class="name">عرفان مولا </span> <span class="fun">|</span>
-                <span class="date">{new Date().toLocaleDateString('fa-IR')}</span>
-            </div>
-        </div> -->
+
     </section>
     
 </main>
