@@ -6,13 +6,17 @@
 <section>
     <h2>نمونه کارها</h2>
     <div class="projects">
-        {#each projects as {path,metadata: {title,body,tags,url}} (path)}
+        {#each projects as {path,metadata: {title,body,tags,url,github}} (path)}
         <a href={url} target="_blank" class="project__box">
             <div class="project__nav">
                
                 <img src="/images/Folder.svg" alt="">
                 <div class="nav__right">
-                    <img src="/images/GitHub.svg" alt="">
+                    {#if github }
+                    <a href={github} target="_blank">
+                        <img src="/images/GitHub.svg" alt="">
+                    </a>
+                    {/if}
                     <img src="/images/link.svg" alt="">
                 </div>
             </div>

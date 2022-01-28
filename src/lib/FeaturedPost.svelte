@@ -1,11 +1,11 @@
 <script>
-    let count = 4
+    let count = 0
     export let posts;
 
 </script>
 
 <section>
-    <h2>پست های پیشنهادی</h2>
+    <h2>مقاله های پیشنهادی</h2>
     <aside>
         
     {#each  posts as {path, metadata: {title}} }

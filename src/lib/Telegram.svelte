@@ -4,7 +4,7 @@
         با عضویت در کانال تلگرام من از جالب ترین مطالبی که مشاهده میکنم باخبر میشید
     </p>
     <div class="box__sub">
-        <span class="id">آیدی : alirzaemirzadeh@</span>
+        <span class="id">alirzaemirzadeh@</span>
         <a href="https://t.me/alirezamirzadeh">عضویت</a>
     </div>
     <p class="vpn">برای عضویت داخل کانال، روشن بودن VPN ضروری است</p>
@@ -15,7 +15,7 @@
 <style>
     section {
         background-color: rgb(239 246 255);
-        padding: 2rem;
+        padding: .5rem 2rem;
         border-radius: .25rem;
         margin-top: 4rem;
         box-shadow: 0 .125rem .5rem rgba(0, 0, 0, 0.05);
@@ -44,12 +44,23 @@
         border-radius: .5rem;
         margin-top: 1rem;
         height: 36px;
+        gap: .25rem;
         align-items: center;
     }
 
     :global(body.dark-mode) .box__sub {
         background-color: rgb(34 34 34/1);
 
+    }
+
+    @media (max-width:500) {
+        a {
+            width: 100%;
+        }
+
+        .id {
+            font-size: 12px;
+        }
     }
 
     a {
@@ -70,7 +81,7 @@
         background-color: rgb(51 51 51/1);
     }
     .id {
-        margin-right: 1rem;
+        margin-right: .25rem;
         opacity: .5;
     }
 
