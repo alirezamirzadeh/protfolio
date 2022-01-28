@@ -12,10 +12,10 @@
         <a href={`/${path.replace(".md","").replace("/data","")}`} class="border_bg article">
             <p>{title}</p>
             <div class="box__icon">
-                <div class="icon">
+                <!-- <div class="icon">
                     <img src="/images/like.svg" alt="" width="24px">
                     <span class="count">{count.toLocaleString("fa-IR")}</span>
-                </div>
+                </div> -->
                 <div class="icon">
                     <img src="/images/comment.svg" alt="" width="24px">
                 <span class="count"> {count.toLocaleString("fa-IR")}</span>

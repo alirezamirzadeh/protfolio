@@ -20,6 +20,7 @@
 <script>
 export let posts;
 let value ='';
+let comment = 0;
 
 let filterBlog= ''
  $: filterBlog = posts.filter(item => item.metadata.title.toLowerCase().includes(value.toLowerCase()))
@@ -53,7 +54,7 @@ let filterBlog= ''
                     <h3>
                     {title} 
                     </h3>
-                    <span> 0 پسند کردن</span>
+                    <span> {comment.toLocaleString("fa-IR")} کامنت</span>
                 </div>
             <p>{sum}</p>
             </a>
