@@ -24,7 +24,6 @@ let value ='';
 let filterBlog= ''
  $: filterBlog = posts.filter(item => item.metadata.title.toLowerCase().includes(value.toLowerCase()))
 
- console.log(filterBlog,value);
 </script>
 
 
@@ -143,4 +142,22 @@ let filterBlog= ''
         filter: invert(78%) sepia(38%) saturate(85%) hue-rotate(06deg) brightness(83%) contrast(100%);
 
     }
+
+    @media (max-width: 700px) {
+        .nav__article{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        span {
+            font-size: .8rem;
+        }
+    }
+
+    @media (max-width: 380px) {
+
+        input {
+            width: 92%;
+        }
+    }
+    
 </style>

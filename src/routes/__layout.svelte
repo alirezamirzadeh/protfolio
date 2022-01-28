@@ -28,6 +28,8 @@ onMount(() => checkUser())
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+
       }
       :global(body) {
       margin: 0;
@@ -42,12 +44,21 @@ onMount(() => checkUser())
       height: 100%;
       margin-inline: auto;
       padding: 1rem;
+ 
 
       }
       :global(body.dark-mode) {
             background-color: #131516;
             color: #eee;
       }
+
+      @media (max-width: 600px) {
+        :global(body) { padding: .5rem 2rem }
+      }
+      @media (max-width: 380px) {
+        :global(body) { padding: 1rem }
+      }
+      
       
 
       :global(a) {

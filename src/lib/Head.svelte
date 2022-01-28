@@ -2,13 +2,14 @@
       import { page } from "$app/stores";
         import {theme,changeTheme} from '../stores/theme';
         import {onMount} from 'svelte';
+import HambergerMenu from "./HambergerMenu.svelte";
 
 
     onMount (() => {
         if ($theme !== "dark") return
         changeTheme()
     })
-
+    let widthScreen; 
         
     let menus = [
         {name: "خانه",url: "/"},
@@ -20,13 +21,18 @@
 
 </script>
 
-<header>
+<header bind:clientWidth={widthScreen}>
     <nav>
-            {#each menus as menu (menu.name)}
-        
-                <a class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
-             
-            {/each}
+            {#if widthScreen < 600}
+                    <HambergerMenu />
+                {:else}
+                    {#each menus as menu (menu.name)}
+            
+                    <a class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
+                
+                {/each}
+            {/if}
+         
     </nav>
     <img on:click={changeTheme} src="/images/{$theme}.svg" alt="">
 </header>
@@ -42,6 +48,11 @@
         justify-content: space-between;
         margin-top: 2rem;
     }    
+    @media (max-width:600){
+        header {
+            margin-top:0;
+        }
+    }
 
     nav {
         display: flex;

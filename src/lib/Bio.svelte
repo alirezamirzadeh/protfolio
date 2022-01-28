@@ -25,11 +25,12 @@
         font-weight: bold;
         font-size: 40px;
         margin: 0;
+        font-weight: 900;
     }
 
     h2 {
         font-weight: 500;
-        font-size: 1.3rem;
+        font-size: 1.15rem;
         margin: 0;
         margin-bottom: 1rem;
         opacity: .8;
@@ -46,4 +47,21 @@
 
     }
 
+    @media (max-width: 600px) {
+        section {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .box__bio {
+            width: 90%;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        img {
+            margin-bottom: 1.5rem;
+            width: 80px;
+        }
+    }
 </style>

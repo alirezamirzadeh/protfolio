@@ -4,15 +4,15 @@
         خب سلام، امیدوارم که حالتون خوب باشه و همچین چیز های مرسومی، دو هفته پیش یک پادکستی منتشر کردم درمورد مفهوم MVP ، ایده این بود
     </p>
     <ul>
-        <li>لپتاپ:   &nbsp Lenovo Legion 5 Pro Gen 6 </li>
-        <li>لپتاپ:   &nbsp Lenovo Legion 5 Pro Gen 6 </li>
-        <li>ادیتور:  &nbsp  Vscode</li>
-        <li>لپتاپ:  &nbsp Lenovo Legion 5 Pro Gen 6 </li>
-        <li>لپتاپ:   &nbsp Lenovo Legion 5 Pro Gen 6 </li>
-        <li>لپتاپ:   &nbsp Lenovo Legion 5 Pro Gen 6 </li>
+        <li>لپتاپ:   &nbsp Lenovo G50-80 </li>
         <li>موبایل:   &nbsp Huawei honor 10 lite </li>
-        <li>لپتاپ:  &nbsp Lenovo Legion 5 Pro Gen 6 </li>
-  
+        <li>ادیتور:  &nbsp  Vscode</li>
+        <li> تم ادیتور:  &nbsp Andromeda </li>
+        <li>فونت ادیتور:   &nbsp cascadia code </li>
+        <li>سیستم عامل اصلی:   &nbsp GNU/Linux</li>
+        <li>توزیع + مدیر پنجره:   &nbsp ubuntu + i3</li>
+        <li>سیتم عامل دوم:  &nbsp  windows 10 </li>
+        
 
     </ul>
 </main>

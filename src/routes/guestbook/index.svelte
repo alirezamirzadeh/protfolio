@@ -28,7 +28,7 @@ let value = '';
         {:else}
         <div class="box__input">
 
-        <button on:click={signIn}>عضویت</button>
+        <button class="btn-login" on:click={signIn}>عضویت</button>
         </div>
         {/if}
         <p class="information">اطلاعات شما فقط برای نمایش نام شما استفاده می شود</p>
@@ -93,7 +93,6 @@ let value = '';
 
     button {
         background-color: rgb(235 235 235/1);
-        width: 150px;
         border-radius: .25rem;
         border: 0;
         color: inherit;
@@ -105,10 +104,17 @@ let value = '';
         text-align: center;
     }
 
+    .btn-login {
+        width: 150px;
+
+    }
+
     .btn-send {
         padding-top: .2rem;
         position: absolute;
         top: 4px;
+        width: 150px;
+
         left: .3rem;
     }
     :global(body.dark-mode) button {
@@ -165,5 +171,15 @@ let value = '';
     .fun {
         opacity: .4;
     }
+
+    @media (max-width:500px) {
+  
+
+        .btn-send {
+            width: 100px;
+            font-size: 1rem;
+        }
+    }
+
   
 </style>

@@ -166,4 +166,15 @@
         color: inherit;
         opacity: .8;
     }
+
+    @media (max-width:700px) {
+        .border_bg {
+            height: 100%;
+        }
+        aside {
+            flex-direction: column;
+        }
+
+      
+    }
 </style>

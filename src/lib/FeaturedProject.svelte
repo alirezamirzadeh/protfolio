@@ -61,6 +61,9 @@
         filter: none;
     }
 
+   
+
+
     .project__box {
         flex: 1 1 280px;
         height: 276px;     
@@ -70,8 +73,12 @@
         cursor: pointer;
         transition: all .3s;
         box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-        
+        position: relative;
+   
+
     }
+
+  
 
     :global(body.dark-mode) .project__box{
         background-color: inherit;
@@ -111,7 +118,10 @@
         display: flex;
         gap: 1rem;
         opacity: .5;
-        
+        bottom: 2rem;
+        position: absolute;
+        flex-wrap: wrap;
+
     }
 
     .all__posts {
@@ -129,5 +139,19 @@
     .all__posts:hover {
         color: inherit;
         opacity: .8;
+    }
+
+    @media (max-width:600px) {
+        .project__box {
+            height: 100%;
+            padding: 1.5rem ;
+        }
+        .box__tag {
+            margin-top: 3rem !important;
+            position: relative;
+            bottom: 0;
+        }
+
+      
     }
 </style>

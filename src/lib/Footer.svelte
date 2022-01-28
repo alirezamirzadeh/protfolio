@@ -53,4 +53,13 @@
         flex-direction: column;
         gap: 1rem;
     }
+
+    @media (max-width:500px) {
+        footer {
+        display: block;
+        }
+        .menu {
+            margin: 1rem 0;
+        }
+    }
 </style>
