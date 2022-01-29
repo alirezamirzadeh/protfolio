@@ -1,14 +1,17 @@
 <script>
+import { onMount } from 'svelte';
+
 
 import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
+import {checkUser} from '../stores/auth';
 
 function handleAddMessage() {
     addMessage(value,$auth.email)
     value = ''
 }
-$: $auth
+onMount(checkUser())
 </script>
 
 <main>
