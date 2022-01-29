@@ -39,6 +39,7 @@ let value = '';
             {#each $messages as message}
             
                 <div class="message">
+                    {console.log(message)}
                     <p class="text">{message.message}</p>
                     <div class="box__inf">
                         <span class="name">{$auth?.user_metadata.user_name}</span> <span class="fun">|</span>
