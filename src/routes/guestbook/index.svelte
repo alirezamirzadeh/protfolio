@@ -11,7 +11,7 @@ function handleAddMessage(v,email) {
    
 }
 
-let checkLog = browser && localStorage.getItem('supabase.auth.token') || false;
+let checkLog = false;
 
 $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     checkLog = true
@@ -32,7 +32,7 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
             برای بازدیدکنندگان آینده سایت من پیامی به اشتراک بگذارید.
 
         </p>
-        {#if checkLog}
+        {#if checkLog }
         <div class="box__input">
             <input bind:value={value} class="box__sub" placeholder="پیام شما ..." required>
             <button on:click={handleAddMessage(value,$auth.email)} class="btn-send">فرستادن</button>
