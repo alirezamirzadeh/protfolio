@@ -22,6 +22,7 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     <p class="title">
         دفترچه مهمان
     </p>
+                {console.log("auth",$auth)}
 
     <p class="body">
             اگه دوست داری یک پیام بنویس, می تواند هرچیزی باشد(درخواست,اطلاعات,قدردانی یا یک جک و...) 
