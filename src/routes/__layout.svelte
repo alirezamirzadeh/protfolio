@@ -58,6 +58,8 @@
       height: 100%;
       margin-inline: auto;
       padding: 1rem;
+      overflow-x: hidden;
+
  
 
       }
