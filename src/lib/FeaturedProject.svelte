@@ -17,7 +17,7 @@
                         <img src="/images/GitHub.svg" alt="">
                     </a>
                     {/if}
-                    <img src="/images/link.svg" alt="">
+                    <img class="lickimage" src="/images/link.svg" alt="">
                 </div>
             </div>
             <p class="title">{title}</p>
@@ -140,6 +140,10 @@
         color: inherit;
         opacity: .8;
     }
+
+    .lickimage {
+       transform: translateY(-4px);
+    }    
 
     @media (max-width:600px) {
         .project__box {
