@@ -175,6 +175,7 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
         gap: 2rem;
         margin-top: .5rem;
         font-size: .95rem;
+        align-items: center;
     }
 
     .date {
@@ -186,7 +187,11 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     }
 
     @media (max-width:500px) {
+        .box__inf  {
+            gap: .5rem
+        }
         .date {
+            top:2px;
             font-size: 12px;
         }
 
