@@ -11,7 +11,7 @@
       })
      );  
     }
-
+ 
 
     export async function load() {
       const projects = await (await Promise.all(project))
@@ -23,6 +23,15 @@
 
 <script>
 import Loading from "$lib/Loading.svelte";
+import { onMount } from "svelte";
+    let loading = true
+
+  onMount(() => {
+    setTimeout(() => {
+        loading = false;
+        }, 1000);
+  });
+
 
     export let projects;
 </script>
@@ -32,7 +41,7 @@ import Loading from "$lib/Loading.svelte";
     <h2>پروژه ها</h2>
     <section>
         {#each projects as {path, metadata: {tags,image,url}} (path)}
-        {#if image}
+        {#if !loading}
         <a href={url} class="project">
             <img src="/images/{image}" alt=""  >
             <div class="tags">

@@ -5,7 +5,7 @@
   .placeholder-item {
     box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.4);
     border-radius: 4px;
-    height: 100vh;
+    height: 230px;
     position: relative;
     overflow: hidden;
     margin-top: 3rem;
