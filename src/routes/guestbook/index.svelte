@@ -55,7 +55,7 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
                 <div class="message">
                     <p class="text">{mess.message}</p>
                     <div class="box__inf">
-                        <span class="name">{mess.email}</span> <span class="fun">|</span>
+                        <span class="name">{mess.username}</span> <span class="fun">|</span>
                         <span class="date">{mess.created_at.split(":")[0].split("-")[0]} / {mess.created_at.split(":")[0].split("-")[1]} / {mess.created_at.split(":")[0].split("-")[2].split('T')[0]}</span>
                     </div>
                 </div>
