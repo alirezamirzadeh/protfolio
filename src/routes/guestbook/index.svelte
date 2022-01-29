@@ -8,7 +8,7 @@ function handleAddMessage() {
     value = ''
 }
 
-const checkLog =  localStorage.getItem('supabase.auth.token') || false;
+const checkLog = localStorage.getItem('supabase.auth.token') || false;
 
 $: if (localStorage.getItem('supabase.auth.token') !== undefined) {
     checkLog = true
