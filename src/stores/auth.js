@@ -2,7 +2,7 @@ import {writable} from 'svelte/store';
 import {supabase} from '../supabase.js';
 
 
-export const auth = writable(null);
+export const auth = writable(supabase.auth.user() || null);
 
 
 export function checkUser() {
@@ -10,7 +10,7 @@ export function checkUser() {
 }
 
 export async function signIn () {
-  await  supabase.auth.signIn({
+  await supabase.auth.signIn({
       provider: 'github',
     })
     checkUser()
