@@ -19,6 +19,9 @@
   })
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/svg" href="/facicon.png" />
+</svelte:head>
 
 <Head/>
  
