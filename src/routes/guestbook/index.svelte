@@ -36,14 +36,13 @@ let value = '';
 
     <section>
        {#if $messages !== null}
-            {#each $messages as message}
+            {#each $messages as mess}
             
                 <div class="message">
-                    {console.log(message)}
-                    <p class="text">{message.message}</p>
+                    <p class="text">{mess.message}</p>
                     <div class="box__inf">
                         <span class="name">{$auth?.user_metadata.user_name}</span> <span class="fun">|</span>
-                        <span class="date">{message.created_at.split(":")[0].split("-")[0]} / {message.created_at.split(":")[0].split("-")[1]} / {message.created_at.split(":")[0].split("-")[2].split('T')[0]}</span>
+                        <span class="date">{mess.created_at.split(":")[0].split("-")[0]} / {mess.created_at.split(":")[0].split("-")[1]} / {mess.created_at.split(":")[0].split("-")[2].split('T')[0]}</span>
                     </div>
                 </div>
              {/each}
