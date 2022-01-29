@@ -6,7 +6,6 @@ export const auth = writable(null);
 
 
 export function checkUser() {
-    console.log(supabase.auth.user());
     auth.set(supabase.auth.user())
 }
 

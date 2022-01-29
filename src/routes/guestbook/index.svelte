@@ -3,6 +3,8 @@
 import {auth,signIn} from '../../stores/auth';
 import { messages,addTodo } from '../../stores/guestbookStore.js';
 let value = '';
+
+$: $auth
 </script>
 
 <main>

@@ -17,15 +17,12 @@ loadTodos();
 
 
 export const addTodo = async (message,email) => {
-    console.log(email,message);
     const {data, error} = await supabase.from('guestbook').insert([{ email,message}]);
     
     if(error) {
-        console.log(error);
         return console.error(error);
     }
 
     messages.update(cur => [...cur, data[0]]);
 };
 
-// به دفترچه مهمان من خوش آمدید! برای ارسال پیام باید با اکانت GitHub وارد شوید.
