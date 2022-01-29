@@ -2,11 +2,12 @@
 import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
-$: $auth
 function handleAddMessage() {
     addMessage(value,$auth.email)
     value = ''
 }
+
+const checkLog = browser && localStorage.getItem('supabase.auth.token') || false
 </script>
 
 <main>
@@ -23,7 +24,7 @@ function handleAddMessage() {
             برای بازدیدکنندگان آینده سایت من پیامی به اشتراک بگذارید.
 
         </p>
-        {#if $auth}
+        {#if checkLog}
         <div class="box__input">
             <input bind:value class="box__sub" placeholder="پیام شما ..." required>
             <button on:click={handleAddMessage(value,$auth.email)} class="btn-send">فرستادن</button>
