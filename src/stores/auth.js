@@ -13,5 +13,6 @@ export async function signIn () {
     supabase.auth.signIn({
       provider: 'github',
     })
+    checkUser()
 }
   
