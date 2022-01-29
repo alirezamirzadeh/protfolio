@@ -1,5 +1,7 @@
 <script>
-import {auth,signIn} from '../../stores/auth';
+import { browser } from '$app/env';
+
+import {auth,checkUser,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
 function handleAddMessage() {
@@ -7,7 +9,11 @@ function handleAddMessage() {
     value = ''
 }
 
-const checkLog = browser && localStorage.getItem('supabase.auth.token') || false
+const checkLog = browser && localStorage.getItem('supabase.auth.token') || false;
+
+$: if (localStorage.getItem('supabase.auth.token') !== undefined) {
+    checkUser = true
+}
 </script>
 
 <main>
