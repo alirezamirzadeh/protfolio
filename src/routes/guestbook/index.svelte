@@ -5,6 +5,7 @@ import {auth,checkUser,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
 $: $auth
+$: $value
 onMount(checkUser)
 
 function handleAddMessage(v,username) {
