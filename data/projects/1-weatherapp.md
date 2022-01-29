@@ -5,6 +5,6 @@ body: یک اپلیکیشن که دیتا را از یک api میگرد و و ب
 tags: Svelte.js CSS HTML
 url: https://weatherapp.alirezamirzadeh.ir
 github: https://github.com/alirezamirzadeh/WeatherApp
-image: protfolio.jpg
+image: weatherapp.jpg
 
 ---

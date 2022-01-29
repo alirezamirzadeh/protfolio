@@ -1,6 +1,5 @@
 <script context="module">
     const allProject = import.meta.glob("../../../data/projects/*.md");
-    console.log(allProject);
 
     let project = [];
 
@@ -24,7 +23,6 @@
 
 <script>
     export let projects;
-    console.log(projects[0].path.replace(".md","").replace("/data/projects","").replace("../../../",""));
 </script>
 
 

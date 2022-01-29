@@ -41,7 +41,7 @@ let value = '';
                 <div class="message">
                     <p class="text">{message.message}</p>
                     <div class="box__inf">
-                        <span class="name">{$auth.user_metadata.user_name}</span> <span class="fun">|</span>
+                        <span class="name">{$auth?.user_metadata.user_name}</span> <span class="fun">|</span>
                         <span class="date">{message.created_at.split(":")[0].split("-")[0]} / {message.created_at.split(":")[0].split("-")[1]} / {message.created_at.split(":")[0].split("-")[2].split('T')[0]}</span>
                     </div>
                 </div>

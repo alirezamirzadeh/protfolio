@@ -1,21 +1,32 @@
 <script>
-import Footer from "$lib/Footer.svelte";
-import Head from "$lib/Head.svelte";
-import {onMount} from 'svelte';
-import {checkUser} from '../stores/auth';
-
-
-
-onMount(checkUser)
-
+  import Footer from "$lib/Footer.svelte";
+  import Head from "$lib/Head.svelte";
+  import {onMount} from 'svelte';
+  import {checkUser} from '../stores/auth';
+  import PageTransition from "$lib/PageTransition.svelte";
+  
+  export let key
+  onMount(checkUser)
+  
 </script>
+<script context="module">
+  export const load = async ({ url }) => ({
+   
+    props: {
+      key: url.href,
+      
+    },
+  })
+</script>
+
 
 <Head/>
  
-<slot></slot>
+<PageTransition refresh={key}>
+    <slot></slot>
+</PageTransition>
 
 <Footer />
-
 
 <style>
     @font-face {

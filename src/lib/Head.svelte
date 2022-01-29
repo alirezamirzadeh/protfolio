@@ -4,11 +4,13 @@
         import {onMount} from 'svelte';
 import HambergerMenu from "./HambergerMenu.svelte";
 
-
     onMount (() => {
-        if ($theme !== "dark") return
-        changeTheme()
+        console.log('dbbd');
+            if ($theme === 'dark') {
+                changeTheme()
+            }
     })
+
     let widthScreen; 
         
     let menus = [
