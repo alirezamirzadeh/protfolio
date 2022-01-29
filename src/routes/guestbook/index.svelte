@@ -6,7 +6,6 @@ import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
 
 $: $auth;
-$: value;
 
 onMount(checkUser)
 
