@@ -22,6 +22,8 @@
 </script>
 
 <script>
+import Loading from "$lib/Loading.svelte";
+
     export let projects;
 </script>
 
@@ -30,6 +32,7 @@
     <h2>پروژه ها</h2>
     <section>
         {#each projects as {path, metadata: {tags,image,url}} (path)}
+        {#if image}
         <a href={url} class="project">
             <img src="/images/{image}" alt=""  >
             <div class="tags">
@@ -38,6 +41,9 @@
                 {/each}
             </div>
         </a>
+        {:else}
+            <Loading />
+        {/if}
         {/each}
       
     </section>

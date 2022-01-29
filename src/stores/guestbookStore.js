@@ -6,17 +6,17 @@ import {supabase} from '../supabase.js';
 export const messages = writable(null);
 
 
-export const loadTodos = async () => {
+export const loadMessages= async () => {
     const {data, error} = await supabase.from('guestbook').select();
     if(error) {
         return console.error(error);
     }
     messages.set(data);
 }
-loadTodos();
+loadMessages();
 
 
-export const addTodo = async (message,email) => {
+export const addMessage = async (message,email) => {
     const {data, error} = await supabase.from('guestbook').insert([{ email,message}]);
     
     if(error) {
