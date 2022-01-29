@@ -1,4 +1,6 @@
 <script>
+import { browser } from '$app/env';
+
 
 import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
@@ -9,9 +11,9 @@ function handleAddMessage(v,email) {
    
 }
 
-let checkLog = localStorage.getItem('supabase.auth.token') || false;
+let checkLog = browser && localStorage.getItem('supabase.auth.token') || false;
 
-$: if (localStorage.getItem('supabase.auth.token') !== null) {
+$: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     checkLog = true
 }
 </script>
