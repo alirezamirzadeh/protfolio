@@ -4,8 +4,9 @@ import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
 function handleAddMessage(value,email) {
-    addMessage(value,email)
     value = ''
+    addMessage(value,email)
+   
 }
 
 let checkLog =localStorage.getItem('supabase.auth.token') || false;
