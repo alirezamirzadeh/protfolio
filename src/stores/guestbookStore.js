@@ -16,8 +16,8 @@ export const loadMessages= async () => {
 loadMessages();
 
 
-export const addMessage = async (message,email) => {
-    const {data, error} = await supabase.from('guestbook').insert([{ email,message}]);
+export const addMessage = async (message,username) => {
+    const {data, error} = await supabase.from('guestbook').insert([{ username,message}]);
     
     if(error) {
         return console.error(error);

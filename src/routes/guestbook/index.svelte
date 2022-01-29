@@ -5,8 +5,8 @@ import { browser } from '$app/env';
 import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
-function handleAddMessage(v,email) {
-    addMessage(v,email)
+function handleAddMessage(v,username) {
+    addMessage(v,username)
     value =''
    
 }
@@ -22,7 +22,6 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     <p class="title">
         دفترچه مهمان
     </p>
-                {console.log("auth",$auth)}
 
     <p class="body">
             اگه دوست داری یک پیام بنویس, می تواند هرچیزی باشد(درخواست,اطلاعات,قدردانی یا یک جک و...) 
@@ -37,7 +36,7 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
         {#if checkLog }
         <div class="box__input">
             <input bind:value={value} class="box__sub" placeholder="پیام شما ..." required>
-            <button on:click={handleAddMessage(value,$auth.email)} class="btn-send">فرستادن</button>
+            <button on:click={handleAddMessage(value,$auth.user_metadata.user_name)} class="btn-send">فرستادن</button>
         </div>
 
         {:else}
