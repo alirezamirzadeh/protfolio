@@ -52,7 +52,7 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
 
     <section>
        {#if $messages !== null}
-            {#each $messages as mess}
+            {#each $messages.reverse() as mess}
             
                 <div class="message">
                     <p class="text">{mess.message}</p>
