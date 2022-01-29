@@ -76,5 +76,33 @@
         text-decoration: none;
         color: inherit;
       }
+      :global(.language-js) {
+        direction: ltr !important;
+        overflow: auto;
+      }
+      :global(.language-js > *) {
+        color: rgb(34 197 94);
 
+      }
+
+      :global(.keyword) {
+        color: rgb(50 20 220);
+
+      }
+      :global(.punctuation) {
+        color: rgb(59 130 246);
+
+      }
+      :global(.operator) {
+        color: rgb(234 100 0);
+      }
+      :global(.string) {
+        color: rgb(168 85 247);
+      }
+
+      :global(.function) {
+        color: rgb(236 72 153);
+      }
+    
+      
 </style>

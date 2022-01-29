@@ -1,4 +1,25 @@
+<script context="module">
+    const allSnippet = import.meta.glob("./*.md");
+    let body = [];
+    for (let path in allSnippet) {
+     body.push(
+      allSnippet[path]().then( ({metadata}) => {
+       return { path, metadata}
+      })
+     );  
+    }
 
+    export async function load() {
+     const snippets = await Promise.all(body);
+   return {
+    props: {snippets}
+   }
+ }
+</script>
+
+<script>
+    export let snippets;
+</script>
 <main>
     <h2>
         تکه کدها
@@ -7,26 +28,13 @@
         اینها مجموعه ای از کدهایی  که من در گذشته استفاده کرده و ذخیره کرده ام. و ممکنه دوباره نیاز داشته باشم و ممکنه شما هم نیاز داشته باشید
     </h3>
     <section>
-        <div class="snippet">
-            <img src="/images/light.svg" alt="">
-            <p class="title">جستجو</p>
-            <p class="body">برای استفاده svelte</p>
-        </div>
-        <div class="snippet">
-            <img src="/images/dark.svg" alt="">
-            <p class="title">جستجو</p>
-            <p class="body">برای استفاده svelte</p>
-        </div>
-        <div class="snippet">
-            <img src="/images/GitHub.svg" alt="">
-            <p class="title">جستجو</p>
-            <p class="body">برای استفاده svelte</p>
-        </div>
-        <div class="snippet">
-            <img src="favicon.png" alt="">
-            <p class="title">جستجو</p>
-            <p class="body">برای استفاده svelte</p>
-        </div>
+        {#each snippets as {path, metadata: {title,sum,image,url}} }
+        <a href="/snippets/{url}" class="snippet">
+            <img src="/images/{image}" alt="">
+            <p class="title">{title}</p>
+            <p class="body">{sum}</p>
+        </a>
+        {/each}
     </section>
 </main>
 
