@@ -1,6 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
-import adapter from '@sveltejs/adapter-auto';
+import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,10 +12,8 @@ const config = {
 
 	kit: {
 		target: '#svelte',
-		adapter: adapter({
-			pages: 'public',
-			assets: 'public'
-		}),
+		adapter: vercel(),
+
 
 		// if you are not using the static adapter and
 		// you don't want prerendering, remove this section
