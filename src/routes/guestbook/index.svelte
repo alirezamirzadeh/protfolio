@@ -186,7 +186,9 @@ $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     }
 
     @media (max-width:500px) {
-  
+        .date {
+            font-size: 12px;
+        }
 
         .btn-send {
             width: 100px;
