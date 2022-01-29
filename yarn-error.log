@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js dev
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/alireza/project/svelteKit/protfolio/package.json: Unexpected token } in JSON at position 680
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+  	"name": "protfolio",
+  	"version": "0.0.1",
+  	"scripts": {
+  		"dev": "svelte-kit dev",
+  		"build": "svelte-kit build",
+  		"package": "svelte-kit package",
+  		"preview": "svelte-kit preview",
+  		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+  		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+  	},
+  	"devDependencies": {
+  		"@sveltejs/adapter-vercel": "next",
+  		"@sveltejs/kit": "next",
+  		"eslint": "^7.32.0",
+  		"eslint-config-prettier": "^8.3.0",
+  		"eslint-plugin-svelte3": "^3.2.1",
+  		"mdsvex": "^0.9.8",
+  		"prettier": "^2.4.1",
+  		"prettier-plugin-svelte": "^2.4.0",
+  		"svelte": "^3.44.0",
+  	},
+  	"type": "module",
+  	"dependencies": {
+  		"@supabase/supabase-js": "^1.29.4",
+  		"mdsvex-relative-images": "^1.0.1",
+  		"rehype-autolink-headings": "^6.1.1",
+  		"rehype-slug": "^5.0.1",
+  		"unist-util-visit": "^4.1.0"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
