@@ -34,7 +34,7 @@ $: if (localStorage.getItem('supabase.auth.token') !== null) {
         {#if checkLog}
         <div class="box__input">
             <input name="text" bind:value class="box__sub" placeholder="پیام شما ..." required>
-            <button on:click={handleAddMessage(v,$auth.email)} class="btn-send">فرستادن</button>
+            <button on:click={handleAddMessage(value,$auth.email)} class="btn-send">فرستادن</button>
         </div>
 
         {:else}
