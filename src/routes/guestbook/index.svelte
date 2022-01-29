@@ -4,8 +4,9 @@ import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
 function handleAddMessage(v,email) {
-    value = ''
     addMessage(v,email)
+    text.value = ''
+
    
 }
 
@@ -32,7 +33,7 @@ $: if (localStorage.getItem('supabase.auth.token') !== null) {
         </p>
         {#if checkLog}
         <div class="box__input">
-            <input bind:value class="box__sub" placeholder="پیام شما ..." required>
+            <input name="text" bind:value class="box__sub" placeholder="پیام شما ..." required>
             <button on:click={handleAddMessage(v,$auth.email)} class="btn-send">فرستادن</button>
         </div>
 
