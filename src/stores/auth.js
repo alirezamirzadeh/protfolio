@@ -10,7 +10,7 @@ export function checkUser() {
 }
 
 export async function signIn () {
-    supabase.auth.signIn({
+  await  supabase.auth.signIn({
       provider: 'github',
     })
     checkUser()
