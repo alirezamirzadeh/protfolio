@@ -8,9 +8,9 @@ function handleAddMessage() {
     value = ''
 }
 
-let checkLog =localStorage.getItem('supabase.auth.token') || false;
+let checkLog =windows.localStorage.getItem('supabase.auth.token') || false;
 
-$: if (localStorage.getItem('supabase.auth.token') !== null) {
+$: if (windows.localStorage.getItem('supabase.auth.token') !== null) {
     checkLog = true
 }
 </script>
