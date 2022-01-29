@@ -3,7 +3,7 @@
 import {auth,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
-function handleAddMessage() {
+function handleAddMessage(value,$auth.email) {
     addMessage(value,$auth.email)
     value = ''
 }
