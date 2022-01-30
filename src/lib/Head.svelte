@@ -32,7 +32,7 @@ import HambergerMenu from "./HambergerMenu.svelte";
                     
                     {/each}
                 {:else}
-                     <HambergerMenu />
+                     <HambergerMenu {widthScreen}/>
 
             {/if}
          
@@ -59,7 +59,6 @@ header {
 .header__nav {
     display: flex;
     align-items: center;
-    gap:1rem
 
 }
 .header__link {

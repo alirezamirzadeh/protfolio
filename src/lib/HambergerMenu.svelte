@@ -34,30 +34,29 @@ import { browser } from "$app/env";
     }
 
 
-
 </script>
 
-    <div  class="sidenav" class:open={navOpen}>
+  <div  class="sidenav" class:open={navOpen}>
         
-        {#each menus as menu (menu.name)}
-                    
-        <a on:click={handleOnClick} class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
+    {#each menus as menu (menu.name)}
+                
+    <a on:click={handleOnClick} class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
 
-        {/each}
-    </div>
+    {/each}
+</div>
 
-    
-    <div class="container" class:change={navOpen} on:click={handleNav}>
-		<div class="block bar1"></div>
-		<div class="block bar2"></div>
-	</div>
+
+<div class="container" class:change={navOpen} on:click={handleNav}>
+<div class="block bar1"></div>
+<div class="block bar2"></div>
+</div>
 
 
 
 
 <style>
 
-@media (max-width:600px){
+
 
   .container {
 	position: absolute;
@@ -160,7 +159,6 @@ a:nth-child(1){
 	width: 100%;
     
 }	
-}
 
 
 
