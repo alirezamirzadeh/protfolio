@@ -1,14 +1,14 @@
 <script>
 import { browser } from "$app/env";
 
-      import { page } from "$app/stores";
+    import { page } from "$app/stores";
 
 	let navOpen = false;
 
     $: if(navOpen && browser) {
         document.body.style.overflow = "hidden";
     }
-    else {
+     else if (browser) {
         document.body.style.overflow = "auto";
 
     }
@@ -57,8 +57,9 @@ import { browser } from "$app/env";
 
 <style>
 
+@media (max-width:600px){
 
-.container {
+  .container {
 	position: absolute;
     display: inline-block;
     cursor: pointer;
@@ -159,6 +160,8 @@ a:nth-child(1){
 	width: 100%;
     
 }	
+}
+
 
 
 </style>

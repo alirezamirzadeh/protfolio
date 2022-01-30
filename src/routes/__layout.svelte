@@ -32,6 +32,7 @@
 <Footer />
 
 <style>
+  
     @font-face {
         font-family: vazir;
         font-style: normal;

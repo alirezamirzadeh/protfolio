@@ -24,64 +24,66 @@ import HambergerMenu from "./HambergerMenu.svelte";
 </script>
 
 <header bind:clientWidth={widthScreen}>
-    <nav>
-            {#if widthScreen < 600}
-                    <HambergerMenu />
-                {:else}
+    <nav class="header__nav">
+            {#if widthScreen > 600}
                     {#each menus as menu (menu.name)}
-            
-                    <a class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
                 
-                {/each}
+                        <a class="header__link" class:active={$page.url.pathname === menu.url} href={menu.url} >{menu.name}</a>
+                    
+                    {/each}
+                {:else}
+                     <HambergerMenu />
+
             {/if}
          
     </nav>
-    <img on:click={changeTheme} src="/images/{$theme}.svg" alt="">
+    <img on:click={changeTheme} src="/images/{$theme}.svg" width="21px" alt="">
 </header>
 
 
 
 <style>
-
+header {
+    display: flex;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: space-between;
+    margin-top: 2rem;
+}    
+@media (max-width:600){
     header {
-        display: flex;
-        width: 100%;
-        margin-inline: auto;
-        justify-content: space-between;
-        margin-top: 2rem;
-    }    
-    @media (max-width:600){
-        header {
-            margin-top:0;
-        }
+        margin-top:0;
     }
+}
 
-    nav {
-        display: flex;
-        align-items: center;
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap:1rem
+
+}
+.header__link {
+    color: rgba(110, 110, 110, 1); 
+     text-decoration: inherit; 
+     font-size: 19px;
+     font-weight: 400;
+     padding: .25rem .5rem ;
+    border-radius: .5rem;
+    transition: .3s all;
+
+}
+
+.header__link:hover {
+    background-color: rgba(110, 110, 110, .1);
+}
+
+
+.active {
+    font-weight: 600;
+    color: inherit;
+}
+
   
-    }
-    a {
-        color: rgba(110, 110, 110, 1); 
-         text-decoration: inherit; 
-         margin-left: 2rem;
-         font-size: 19px;
-         font-weight: 400;
-         padding: .25rem .5rem ;
-        border-radius: .5rem;
-        transition: .3s all;
-
-    }
-
-    a:hover {
-        background-color: rgba(110, 110, 110, .1);
-    }
-
-
-    .active {
-        font-weight: 600;
-        color: inherit;
-    }
       img {
             color: white;
             border: none;
