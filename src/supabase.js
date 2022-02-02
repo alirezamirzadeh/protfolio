@@ -1,7 +1,7 @@
 import {createClient} from '@supabase/supabase-js';
 
 
-const supabaseUrl =import.meta.env.VITEPUBLICSUBSCRIBEURL;
-const supabaseAnonKey =import.meta.env.VITEPUBLICSUBSCRIBEANONKEY;
+const supabaseUrl =process.env.VITEPUBLICSUBSCRIBEURL;
+const supabaseAnonKey =process.env.VITEPUBLICSUBSCRIBEANONKEY;
 
 export const supabase = createClient(supabaseUrl,supabaseAnonKey)
