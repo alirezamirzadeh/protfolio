@@ -22,8 +22,9 @@ export let posts;
 let value ='';
 let comment = 0;
 
-let filterBlog= ''
- $: filterBlog = posts.filter(item => item.metadata.title.toLowerCase().includes(value.toLowerCase()))
+let filterBlog= '';
+
+$: filterBlog = posts.filter(item => item.metadata.title.toLowerCase().includes(value.toLowerCase()))
 
 </script>
 

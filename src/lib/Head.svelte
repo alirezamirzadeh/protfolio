@@ -5,7 +5,6 @@
 import HambergerMenu from "./HambergerMenu.svelte";
 
     onMount (() => {
-        console.log('dbbd');
             if ($theme === 'dark') {
                 changeTheme()
             }

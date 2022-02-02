@@ -23,7 +23,7 @@
 
     export async function load() {
      const posts = await (await Promise.all(body)).slice(-3)
-      const projects = await (await Promise.all(project))
+      const projects = await Promise.all(project)
       return {
         props: {posts,projects}
       }
@@ -41,6 +41,11 @@ export let posts;
 export let projects;
 
 </script>
+
+<svelte:head>
+  <title>علیرضا میرزاده</title>
+</svelte:head>
+
 <main>
 <Bio />
 <FeaturedPost {posts}/>

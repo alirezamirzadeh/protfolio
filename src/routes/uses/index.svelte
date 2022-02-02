@@ -1,3 +1,9 @@
+<script>
+    import uses from '../../../data/uses.js';
+    
+    
+</script>
+
 <main>
     <p class="title">ابزارهای من</p>
     <p class="body">
@@ -5,23 +11,9 @@
             گفتم شاید کسی دوست داره بدونه
         </p>
     <ul>
-        <li>لپتاپ:   &nbsp Lenovo G50-80 </li>
-        <li>موبایل:   &nbsp Huawei honor 10 lite </li>
-        <li>ادیتور:  &nbsp  VsCode</li>
-        <li> تم ادیتور:  &nbsp Andromeda </li>
-        <li>فونت ادیتور:   &nbsp cascadia code </li>
-        <li>سیستم عامل اصلی:   &nbsp GNU/Linux</li>
-        <li>توزیع + مدیر پنجره:   &nbsp Ubuntu(21.04) + i3</li>
-        <li>سیتم عامل دوم:  &nbsp  windows 10 </li>
-        <li>نرم افزار گرافیکی:  &nbsp figma </li>
-        <li>مرورگر اصلی:  &nbsp Chromium </li>
-        <li>UI فریم ورک:  &nbsp Vue & Svelte </li>
-        <li>ماژول باندلر:  &nbsp Vite </li>
-
-
-
-        
-
+        {#each uses as use (use.key)}
+             <li>{use.key}:   &nbsp {use.value} </li>
+        {/each}
     </ul>
 </main>
 

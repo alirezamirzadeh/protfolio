@@ -20,6 +20,8 @@
 <script>
     export let snippets;
 </script>
+
+
 <main>
     <h2>
         تکه کدها
@@ -28,7 +30,7 @@
         اینها مجموعه ای از کدهایی  که من در گذشته استفاده کرده و ذخیره کرده ام. و ممکنه دوباره نیاز داشته باشم و ممکنه شما هم نیاز داشته باشید
     </h3>
     <section>
-        {#each snippets as {path, metadata: {title,sum,image,url}} }
+        {#each snippets as { metadata: {title,sum,image,url}} }
         <a href="/snippets/{url}" class="snippet">
             <img src="/images/{image}" alt="">
             <p class="title">{title}</p>

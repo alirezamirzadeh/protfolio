@@ -5,7 +5,6 @@ import {auth,checkUser,signIn} from '../../stores/auth';
 import { messages,addMessage } from '../../stores/guestbookStore.js';
 let value = '';
 
-$: $auth;
 
 onMount(checkUser)
 
@@ -19,6 +18,7 @@ let checkLog = false;
 $: if ( browser && localStorage.getItem('supabase.auth.token') !== null) {
     checkLog = true
 }
+
 </script>
 
 <main>
