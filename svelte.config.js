@@ -21,7 +21,10 @@ const config = {
 				fs: {
 					allow: ['./']
 				}
-			}
+			},
+			define: {
+				'process.env': process.env,
+			  },
 		}
 	}
 };
