@@ -58,6 +58,7 @@ header {
 .header__nav {
     display: flex;
     align-items: center;
+    gap: 1rem;
 
 }
 .header__link {
