@@ -22,7 +22,7 @@
 <svelte:head>
   <link rel="icon" type="image/svg" href="favicon.png" />
   <title>علیرضا میرزاده</title>
-  <meta name="description" content="سایت شخصی علیرضا میرزاده">
+  <meta name="description" content="سلام علیرضا میرزاده هستم این سایت شخصی منه من یکفرانت دولوپر هستم و علاقه زیادی به vuejs و sveltejs دارم">
 </svelte:head>
 
 <Head/>
