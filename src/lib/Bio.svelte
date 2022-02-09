@@ -62,6 +62,7 @@
         img {
             margin-bottom: 1.5rem;
             width: 80px;
+            height: 80px;
         }
     }
 </style>
