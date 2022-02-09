@@ -21,6 +21,8 @@
 
 <svelte:head>
   <link rel="icon" type="image/svg" href="favicon.png" />
+  <title>علیرضا میرزاده</title>
+  <meta name="description" content="سایت شخصی علیرضا میرزاده">
 </svelte:head>
 
 <Head/>

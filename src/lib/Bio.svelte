@@ -9,7 +9,7 @@
 من چیزهایی برای وب میسازم. یک فن دنیای اوپن سورس, عاشق یادگیری فناوری های جدید و علاقه زیادی به پرفرمنس وب دارم
 		</p>
 	</div>
-    <img src="/images/profile.jpg" alt="" width="120px">
+    <img src="/images/profile.jpg" alt="" width="120" height="120">
 </section>
 
 

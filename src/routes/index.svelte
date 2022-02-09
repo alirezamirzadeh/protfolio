@@ -42,9 +42,6 @@ export let projects;
 
 </script>
 
-<svelte:head>
-  <title>علیرضا میرزاده</title>
-</svelte:head>
 
 <main>
 <Bio />

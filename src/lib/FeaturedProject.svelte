@@ -1,6 +1,5 @@
 <script>
     export let projects
-    console.log(projects.tags);
 </script>
 
 <section>
@@ -10,14 +9,14 @@
         <a href={url} target="_blank" class="project__box">
             <div class="project__nav">
                
-                <img src="/images/Folder.svg" alt="">
+                <img src="/images/Folder.svg" alt="" width="40" height="40">
                 <div class="nav__right">
                     {#if github }
-                    <a href={github} target="_blank">
-                        <img src="/images/GitHub.svg" alt="">
+                    <a href={github} target="_blank" aria-label="Github">
+                        <img src="/images/GitHub.svg" alt="" width="24" height="24">
                     </a>
                     {/if}
-                    <img class="lickimage" src="/images/link.svg" alt="">
+                    <img class="lickimage" src="/images/link.svg" alt="" width="24" height="24">
                 </div>
             </div>
             <p class="title">{title}</p>
